@@ -172,12 +172,19 @@ header .intro-text .skills {
 
 section {
     padding: 100px 0;
+    background: #75A8DB;
 }
 
 section h2 {
     margin: 0;
     font-size: 3em;
 }
+
+section.warning {
+    color: #fff;
+    background: #2c3e50;
+}
+
 
 section.success {
     color: #fff;
