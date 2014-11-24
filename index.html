@@ -257,20 +257,31 @@
         </div>
     </section>
 
-    <section id="upload">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <form action="demo_form.asp">
-                        <input type="file" name="pic" accept="image/*">
-                        <input type="submit">
-                    </form>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Donkey is also a beer!</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/donkey0.jpg" class="img-responsive img-centered" alt="">
+                            <p>Beer comes from Santorini.</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Portfolio Modals -->
+    </div>
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -363,6 +374,17 @@
             </div>
         </div>
     </div>
+    <div class="row center_div">
+    <div class="col-lg-6">
+       <!-- <div class="input-group"> -->
+    <input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+<div class="fileUpload btn btn-primary">
+    <span>Upload</span>
+    <input id="uploadBtn" type="file" class="upload" />
+</div>
+<!-- </div> -->
+</div>
+</div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -378,7 +400,33 @@
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
-
+    <style>
+    .center_div{
+    margin: 0 auto;
+    width:20% /* value of your choice which suits your alignment */
+}
+    .fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    </style>
+    <script>
+    document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+    </script>
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
 
