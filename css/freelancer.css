@@ -91,8 +91,8 @@ header .container {
 }
 
 header .container.short {
-    padding-top: 120px;
-    padding-bottom: 10px;
+    /*padding-top: 120px;*/
+    /*padding-bottom: 10px;*/
 }
 
 header img {
